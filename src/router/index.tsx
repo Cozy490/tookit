@@ -18,5 +18,4 @@ const routes: RouteObject[] = [
     element: <div>404</div>,
   }
 ];
-
 export default routes;
