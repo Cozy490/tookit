@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { counterSlice } from "../store/homeSlice";
 import { getInfo,getParamsInfo } from "../store/homeSlice";
 import { useNavigate } from "react-router-dom";
+import './home.less'
 
 const Home = () => {
   const valueFromStore = useSelector((state:any) => state.home.value);
@@ -52,7 +53,7 @@ const Home = () => {
         <button onClick={handleDecrement}>减一</button>
         <button onClick={handleIncrement}>加一</button>
         <div>{valueFromStore}</div>
-        <div>Sum Result: {sumResult}</div>
+        <div className="home">Sum Result: {sumResult}</div>
         <button onClick={goToAbout}>去About页面</button>
       </div>
     </>
