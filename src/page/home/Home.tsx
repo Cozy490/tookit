@@ -1,8 +1,9 @@
 import React, { useEffect, useCallback, useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { counterSlice } from "../store/homeSlice";
-import { getInfo,getParamsInfo } from "../store/homeSlice";
+// import { getInfo,getParamsInfo } from "@/store/homeSlice";
 import { useNavigate } from "react-router-dom";
+import { counterSlice,getInfo,getParamsInfo  } from "../../store/homeSlice";
+import './home.css'
 
 const Home = () => {
   const valueFromStore = useSelector((state:any) => state.home.value);
@@ -53,6 +54,7 @@ const Home = () => {
         <button onClick={handleIncrement}>加一</button>
         <div>{valueFromStore}</div>
         <div>Sum Result: {sumResult}</div>
+        <div>{process.env.REACT_APP_API_URL}</div>
         <button onClick={goToAbout}>去About页面</button>
       </div>
     </>
